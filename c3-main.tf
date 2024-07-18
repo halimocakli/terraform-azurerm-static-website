@@ -23,17 +23,17 @@ resource "azurerm_storage_account" "storage_account" {
 resource "azurerm_storage_blob" "storage_blob_index" {
   name                   = var.storage_blob_index_document_name
   storage_account_name   = azurerm_storage_account.storage_account.name
-  storage_container_name = var.storage_blob_container_name
-  type                   = var.storage_blob_type
-  content_type           = var.storage_blob_content_type
+  storage_container_name = var.storage_blob_container_name_index
+  type                   = var.storage_blob_type_index
+  content_type           = var.storage_blob_content_type_index
   source                 = var.storage_blob_index_document_source
 }
 
 resource "azurerm_storage_blob" "storage_blob_error" {
   name                   = var.storage_blob_error_document_name
   storage_account_name   = azurerm_storage_account.storage_account.name
-  storage_container_name = var.storage_blob_container_name
-  type                   = var.storage_blob_type
-  content_type           = var.storage_blob_content_type
+  storage_container_name = var.storage_blob_container_name_error
+  type                   = var.storage_blob_type_error
+  content_type           = var.storage_blob_content_type_error
   source                 = var.storage_blob_error_document_source
 }
